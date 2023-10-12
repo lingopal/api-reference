@@ -8,7 +8,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
-    <title>API - Documentation</title>
+    <title>Lingopal - API</title>
     <meta name="description" content="">
     <meta name="author" content="ticlekiwi">
 
@@ -66,6 +66,12 @@
             </li>
             <li class="scroll-to-link" data-target="content-add-facial-mapping">
                 <a>Add Facial Mapping</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-create-stream">
+                <a>Create Stream</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-end-stream">
+                <a>End Stream</a>
             </li>
         </ul>
     </div>
@@ -362,6 +368,82 @@
                     <td>secret_key</td>
                     <td>String</td>
                     <td>Your API key.</td>
+                </tr>
+                
+                </tbody>
+            </table>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-create-stream">
+            <h2>create stream</h2>
+            <p>
+                To create a stream you need to make a POST call to the following url :<br>
+                <code class="higlighted break-word">http://api.lingopal.ai/stream/create</code>
+            </p>
+            <br>
+            
+            <h4>QUERY PARAMETERS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>url</td>
+                    <td>String</td>
+                    <td>The url of the stream to ingest.</td>
+                </tr>
+                <tr>
+                    <td>languages</td>
+                    <td>String</td>
+                    <td>Languages to translate stream to.</td>
+                </tr>
+                <tr>
+                    <td>format</td>
+                    <td>String</td>
+                    <td>Format of stream that will be ingested.</td>
+                </tr>
+                <tr>
+                    <td>output_platforms</td>
+                    <td>String</td>
+                    <td>Platforms that the stream should be directed towards.</td>
+                </tr>
+                <tr>
+                    <td>lingopal_hosted</td>
+                    <td>Boolean</td>
+                    <td>Lingopal can host the stream for you.</td>
+                </tr>
+                
+                </tbody>
+            </table>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-end-stream">
+            <h2>end stream</h2>
+            <p>
+                To end a stream you need to make a POST call to the following url :<br>
+                <code class="higlighted break-word">http://api.lingopal.ai/stream/end</code>
+            </p>
+            <br>
+            
+            <h4>QUERY PARAMETERS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>stream_id</td>
+                    <td>String</td>
+                    <td>The ID of the stream.</td>
                 </tr>
                 
                 </tbody>
